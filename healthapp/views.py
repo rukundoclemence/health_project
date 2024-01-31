@@ -9,6 +9,6 @@ def index(request):
 def login (request):
     
     return render(request, "login.html")
-def signUp (request):
+def SignUp (request):
 
-    return render(request, "signUp.html")
+    return render(request, "SignUp.html")
