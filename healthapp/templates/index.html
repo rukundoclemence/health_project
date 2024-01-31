@@ -5,54 +5,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webdesigntailwindcss</title>
+    <title>Mentaltailwindcss</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <section class="max-w-5xl mx-auto">
-        <div class="container  bg-stone-550 bg-center bg-cover  py-10 relative flex flex-wrap">
+    <section class="max-w-5xl mx-auto ">
+        <div class="container bg-stone-550 bg-center bg-cover  py-10 relative flex flex-wrap">
             <div class="w-full h-70 z-70">
-                <nav class="flex item-center justify-end bg-violet-500 px-4 py-4 rounded-md">
-                    <a href="#" class="ml-6 text-2xl font-bold text-white mr-auto">MHS</a>
-                    <a href="#" class="mr-6 text-black m-2 hover:text-blue-300">Home</a>
-                    <a href="#" class="mr-6 text-black m-2 hover:text-blue-300">Service</a>
-                    <button class="bg-violet border border-black rounded-[6px] px-5 py-2 w-40 m-2">Join</button>
-                    <button class="bg-violet border border-white rounded-[6px] px-5 py-2 w-40 m-2">Join Now</button>
+                <nav class="flex item-center justify-end bg-blue-200 px-4 py-4 rounded-md">
+                    <a href="#" class="ml-6 text-3xl font-bold text-blue-500 mr-auto">MHS</a>
+                    <a href="#" class="mr-6 text-xl-black m-2 hover:text-blue-300">Home</a>
+                    <a href="#" class="mr-6 text-xl-black m-2 hover:text-blue-300">About</a>
+                    <a href="#" class="mr-6 text-xl-black m-2 hover:text-blue-300">Service</a>
+                    <button class="bg-blue-500 text-white hover:text-blue-300 font-bold rounded-[6px] px-5 py-2 w-40 m-2"><a href=" {% url 'login' %}">Login</a></button>
+                    <button class="bg-blue-500 text-white hover:text-blue-300 font-bold rounded-[6px] px-5 py-2 w-40 m-2"><a href=" {% url 'SignUp' %}">SignUp</a></button>
                 </nav>
             </div>
 
             <div class="bg-white p-5 rounded-[20px] flex">
-                <div class="h-50 w-1/2">
-                    <h1 class="text-2xl text-black mt-5 font-bold"> Mental Health Support</h1>
-                    <p class="text-xl text-black mt-5">WheIt helps us to calm and comfort ourselvers when we’re upset,
+                <div class="h-50 w-1/2 m-4">
+                    <h1 class="text-6xl text-black mt-5 font-bold"> Mental Health Support</h1>
+                    <p class="text-l pr-32 text-black mt-2">WheIt helps us to calm and comfort ourselvers when we’re
+                        upset,
                         to cope with the losses, changes, fears and uncetainties in life, to make and keep good
                         relationships with other people and to learn.</p>
                 </div>
 
                 <div class=" bg-white h-10 relative w-1/2">
-                    <button class="bg-white border border-[#DDEFFD] rounded-[50px] px-5 py-2 w-32 absolute -left-10 top-[50px]">Well-being</button>
-                    <button class="bg-white border border-[#DDEFFD] rounded-[50px] px-5 py-2 w-32 absolute -left-36 top-[200px]">Well-being</button>
-                    <button class="bg-white border border-[#DDEFFD] rounded-[50px] px-5 py-2 w-32 absolute -left-10 top-[350px]">Well-being</button>
-                    <button class="bg-white border border-[#DDEFFD] rounded-[50px] px-5 py-2 w-32 absolute right-5 top-[350px]">Well-being</button>
+                    <button
+                        class="bg-white border border-[#DDEFFD] rounded-[50px] px-5 py-2 w-32 absolute -left-10 top-[50px]">Well-being</button>
+                    <button
+                        class="bg-white border border-[#DDEFFD] rounded-[50px] px-5 py-2 w-32 absolute -left-36 top-[200px]">Well-being</button>
+                    <button
+                        class="bg-white border border-[#DDEFFD] rounded-[50px] px-5 py-2 w-32 absolute -left-10 top-[350px]">Well-being</button>
+                    <button
+                        class="bg-white border border-[#DDEFFD] rounded-[50px] px-5 py-2 w-32 absolute right-5 top-[350px]">Well-being</button>
 
                     <img class="w-full" src="{% static 'image/hero-image.png' %}" alt="hero image">
                 </div>
             </div>
-
-            <div class="h-10">
-                <img src="{% static 'image/mental2.png' %}" alt="../statics/image/mental2.png">
-                <button class="bg-violet border border-white rounded-[6px] px-5 py-2 w-full">Secure Life</button>
-                <button class="bg-violet border border-white rounded-[6px] px-5 py-2 w-full">Health Mindset</button>
-                <button class="bg-violet border border-white rounded-[6px] px-5 py-2 w-full">Health Mindset</button>
-            </div>
-            <div>
-                <p></p>
-            </div>
-
-
         </div>
+    </section>
+
+    <section class="flex flex-col max-w-5xl mx-auto m-15 h-[30rem] justify-end">
+        <div class="flex flex-row items-end bg-blue-200 h-[12rem] rounded-t-xl rounded-b-3xl">
+            <img class="h-[25rem]" src="{% static 'image/mental2.png' %}" alt="../statics/image/mental2.png">
+            <div
+                class="w-2/5 bg-stone-550 bg-center bg-cover justify-between flex flex-wrap">
+                <button class="bg-violet border border-[#DDEFFD]  rounded-[50px] px-5 py-2 w-60 bg-white m-3 -left-36 top-[350px]">Secure
+                    Life</button>
+                <button
+                    class="bg-violet border border-[#DDEFFD]  rounded-[50px] px-5 py-2 w-60 bg-white m-3 top-[350px]">Health
+                    Mindset</button>
+                <button class="bg-violet border border-[#DDEFFD]  rounded-[50px] px-5 py-2 w-60 bg-white m-3 top-[350px]">Health
+                    Mindset</button>
+            </div>
+            <div class="max-w-3xl mx-auto ">
+                <p class="text-2xl text-black mt-2 font-bold m-20 px-2">Let is your health flow around the well-being body</p>
+            </div>
+        </div>
+        <div class="flex flex-row justify-center">
+            <button class="bg-blue-500 border border-white hover:text-blue-300 text-white font-bold rounded-[6px] px-5 py-2 w-40 m-10">SignUp</button>
+        </div>
+        
     </section>
 </body>
 
