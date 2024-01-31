@@ -15,12 +15,12 @@
         <div class="container bg-stone-550 bg-center bg-cover  py-10 relative flex flex-wrap">
             <div class="w-full h-70 z-70">
                 <nav class="flex item-center justify-end bg-blue-200 px-4 py-4 rounded-md">
-                    <a href="#" class="ml-6 text-3xl font-bold text-blue-500 mr-auto">MHS</a>
-                    <a href="#" class="mr-6 text-xl-black m-2 hover:text-blue-300">Home</a>
+                    <a href=" {% url 'index' %}" class="ml-6 text-3xl font-bold text-blue-500 mr-auto">MHS</a>
+                    <a href=" {% url 'index' %}" class="mr-6 text-xl-black m-2 hover:text-blue-300">Home</a>
                     <a href="#" class="mr-6 text-xl-black m-2 hover:text-blue-300">About</a>
                     <a href="#" class="mr-6 text-xl-black m-2 hover:text-blue-300">Service</a>
-                    <button class="bg-blue-500 text-white hover:text-blue-300 font-bold rounded-[6px] px-5 py-2 w-40 m-2"><a href=" {% url 'login' %}">Login</a></button>
-                    <button class="bg-blue-500 text-white hover:text-blue-300 font-bold rounded-[6px] px-5 py-2 w-40 m-2"><a href=" {% url 'SignUp' %}">SignUp</a></button>
+                    <button class="bg-blue-500 text-white hover:text-blue-300 font-bold rounded-[6px] px-5 py-2 w-40 m-2"><a href=" {% url 'login_user' %}">Login</a></button>
+                    <button class="bg-blue-500 text-white hover:text-blue-300 font-bold rounded-[6px] px-5 py-2 w-40 m-2"><a href=" {% url 'signup' %}">SignUp</a></button>
                 </nav>
             </div>
 

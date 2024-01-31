@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="bg-white shadow-none hidden md:block">
+      <div class="container mx-auto flex items-center justify-between h-24">
+        <a href=" {% url 'index' %}" class="flex items-center justify-center">
+          <span class="ml-4 uppercase font-black text-gray-900"
+            >MENTAL HEALTH<br />SYSTEM</span
+          >
+        </a>
+        <div class="flex items-center text-gray-900">
+          <nav class="contents font-semibold text-base lg:text-lg">
+            {% if user.is_authenticated %}
+            <ul class="mx-auto flex items-center">
+                <li class="p-5 xl:p-8 capitalize">
+                    <a href="">
+                        <span>Welcome, {{ user.username }}!</span>
+                    </a>
+                </li>
+            </ul>
+            {% else %}
+                <p><a href="{% url 'login' %}">Login</a></p>
+            {% endif %}
+          </nav>
+          <div>
+            <a href=" {% url 'logout' %}" class="bg-[#6978FF] text-gray-200 rounded-full font-bold px-8 py-2">
+              logout
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
+        <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+        </div>
+    </div>
+  </body>
+</html>
