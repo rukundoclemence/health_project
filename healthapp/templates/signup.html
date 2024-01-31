@@ -1,130 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Signup</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentaltailwindcss</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <header class="bg-white shadow-none hidden md:block">
-      <div class="container mx-auto flex items-center justify-between h-24">
-        <a href="" class="flex items-center justify-center">
-          <span class="ml-4 uppercase font-black text-gray-900"
-            >MENTAL HEALTH<br />SYSTEM</span
-          >
-        </a>
-        <div class="flex items-center text-gray-900">
-          <nav class="contents font-semibold text-base lg:text-lg">
-            <ul class="mx-auto flex items-center">
-              <li class="p-5 xl:p-8 active">
-                <a href="">
-                  <span>Home</span>
-                </a>
-              </li>
-              <li class="p-5 xl:p-8">
-                <a href="">
-                  <span>About</span>
-                </a>
-              </li>
-              <li class="p-5 xl:p-8">
-                <a href="">
-                  <span>Services</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <div>
-            <button
-              class="bg-[#6978FF] text-gray-200 rounded-full font-bold px-8 py-2"
-            >
-              Login
-            </button>
-            <button
-              class="bg-[#6978FF] text-gray-200 rounded-full font-bold px-8 py-2"
-            >
-              Join now
-            </button>
-          </div>
-        </div>
-      </div>
-    </header>
+   
+</head>
+<body>
 
-    <div
-      class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12"
-    >
-      <div class="relative py-3 sm:max-w-xl sm:mx-auto">
-        <div
-          class="relative px-4 py-10 bg-white mx-8 md:mx-0 shadow rounded-3xl sm:p-10"
-        >
-          <div class="max-w-md mx-auto">
-            <div class="flex items-center space-x-5">
-              <div
-                class="block pl-2 font-semibold text-xl self-start text-gray-700"
-              >
-                <h2 class="leading-relaxed">Welcome To MHS!</h2>
-                <p class="text-sm text-gray-500 font-normal leading-relaxed">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                </p>
-              </div>
+    <section>
+        <div class="container bg-stone-550 bg-center bg-cover  py-10 relative flex flex-wrap">
+            <div class="w-full h-70 z-70">
+                <nav class="flex item-center justify-end bg-blue-200 px-4 py-4 rounded-md">
+                    <a href="#" class="ml-6 text-3xl font-bold text-blue-500 mr-auto">MHS</a>
+                    <a href="#" class="mr-6 text-xl-black m-2 hover:text-blue-300">Home</a>
+                    <a href="#" class="mr-6 text-xl-black m-2 hover:text-blue-300">About</a>
+                    <a href="#" class="mr-6 text-xl-black m-2 hover:text-blue-300">Service</a>
+                    <button class="bg-blue-500 text-white hover:text-blue-300 font-bold rounded-[6px] px-5 py-2 w-40 m-2">Login</button>
+                    <button class="bg-blue-500 text-white hover:text-blue-300 font-bold rounded-[6px] px-5 py-2 w-40 m-2">SignUp</button>
+                </nav>
             </div>
-            <div class="divide-y divide-gray-200">
-              <form method="POST" action="{% url 'signup' %}">
-                {% csrf_token %}
-
-                <div
-                  class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7"
-                >
-                  <div class="flex flex-col">
-                    <label class="leading-loose">Your Firstname</label>
-                    <input
-                      type="text"
-                      class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
-                      placeholder="Firstname"
-                      name="firstname"
-                    />
-                  </div>
-                  <div class="flex flex-col">
-                    <label class="leading-loose">Your Lastname</label>
-                    <input
-                      type="test"
-                      class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
-                      placeholder="Lastname"
-                      name="lastname"
-                    />
-                  </div>
-                  <div class="flex flex-col">
-                    <label class="leading-loose">Your Email address</label>
-                    <input
-                      type="email"
-                      class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
-                      placeholder="Email Address"
-                      name="email"
-                    />
-                  </div>
-                  <div class="flex flex-col">
-                    <label class="leading-loose">Your Password</label>
-                    <input
-                      type="password"
-                      class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
-                      placeholder="Password"
-                      name="password"
-                    />
-                  </div>
-                </div>
-                <div class="pt-4 flex items-center space-x-4">
-                  <button
-                    type="submit"
-                    class="bg-blue-500 flex justify-center items-center w-full text-white px-4 py-3 rounded-md focus:outline-none"
-                  >
-                    Create account
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </body>
+
+    </section>
+
+</body>
 </html>
